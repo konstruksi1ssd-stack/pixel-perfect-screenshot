@@ -1,6 +1,13 @@
+import groomPhoto from "@/assets/groom-portrait.webp.asset.json";
+import bridePhoto from "@/assets/bride-portrait.webp.asset.json";
+
 export const WEDDING = {
   bride: "Salsabila",
   groom: "Lukman",
+  brideFull: "Salsabila Nur Azzahra",
+  groomFull: "Muhammad Lukman Hakim",
+  /** Individual portraits — replace the asset files to swap in the real photos. */
+  photos: { bride: bridePhoto.url, groom: groomPhoto.url },
   brideParents: "Putri dari Bapak Ahmad & Ibu Siti",
   groomParents: "Putra dari Bapak Hasan & Ibu Aminah",
   akad: { date: "2026-12-18T08:00:00+07:00", label: "Jumat, 18 Desember 2026", time: "08.00 WIB", place: "Masjid Agung Al-Azhar", address: "Jl. Sisingamangaraja, Jakarta Selatan", map: "https://maps.google.com/?q=Masjid+Agung+Al-Azhar+Jakarta" },
