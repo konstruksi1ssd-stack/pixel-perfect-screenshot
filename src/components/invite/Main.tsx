@@ -97,7 +97,9 @@ function Rsvp({ guest }: { guest: string }) {
   const [attend, setAttend] = useState("Hadir");
   const [count, setCount] = useState(1);
   const [msg, setMsg] = useState("");
-  useEffect(() => setEntries(loadEntries()), []);
+  useEffect(() => {
+    setEntries(loadEntries());
+  }, []);
   const submit = (ev: React.FormEvent) => {
     ev.preventDefault();
     if (!name.trim() || !msg.trim()) {
@@ -153,7 +155,9 @@ export function Main({ guest }: { guest: string }) {
   const { scrollY } = useScroll();
   const bgY = useTransform(scrollY, [0, 3000], ["0%", "20%"]);
   const [lightbox, setLightbox] = useState<string | null>(null);
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const copy = (t: string) => {
     navigator.clipboard?.writeText(t);
     toast.success("Nomor rekening disalin");
