@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- The invitation flow lives in `src/components/invite/` (Cover → Journey → Main), orchestrated by `src/routes/index.tsx`; Journey mounts under the Cover on tap so scenes hand off without blank frames.
+- Opening-scene characters and butterflies are positioned in percentages of a fixed-aspect "stage" that matches the garden image, so they stay aligned with its perspective on every screen size.
+- Binary images are served via Lovable Assets pointers (`*.asset.json`), optimized to WebP where possible, to keep phone loading light.
