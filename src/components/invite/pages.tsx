@@ -204,7 +204,7 @@ function Gallery({ openPhoto }: PageCtx) {
             onClick={() => openPhoto(g)}
             aria-label={`Buka foto galeri ${i + 1}`}
             className="group relative overflow-hidden rounded-[10px] border-[3px] border-ivory shadow-sheet"
-            style={{ gridArea: TILES[i].area, rotate: `${TILES[i].rot}deg` }}
+            style={{ gridArea: TILES[i]?.area, rotate: `${TILES[i]?.rot ?? 0}deg` }}
           >
             <img src={g} alt={`Galeri ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 ease-out md:group-hover:scale-[1.04]" />
           </motion.button>
