@@ -47,7 +47,7 @@ export function Cover({ guest, onOpenStart, onOpened }: { guest: string; onOpenS
       transition={{ duration: 0.6 }}
     >
       {/* night garden backdrop — a light opening from the doorway reveals the garden beneath */}
-      <motion.div className="absolute inset-0" style={opening ? { WebkitMaskImage: mask, maskImage: mask } : undefined}>
+      <motion.div className="absolute inset-0" style={opening ? { WebkitMaskImage: mask, maskImage: mask } : {}}>
         <div className="absolute inset-0 bg-night">
           <img src={leaves.url} alt="" className="absolute inset-0 h-full w-full object-cover opacity-60" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.24_0.055_258/0.35),oklch(0.16_0.04_260/0.92)_75%)]" />
